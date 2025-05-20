@@ -1,234 +1,8 @@
-<!-- <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geek Korner - Formations Numériques</title>
-  <style>
-    :root {
-      --color-primary: #00e0ff;
-      --color-secondary: #7f00ff;
-      --bg-dark: #0f0c29;
-      --bg-mid: #302b63;
-      --bg-light: #24243e;
-      --text-light: #f0f0f0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, var(--bg-dark), var(--bg-mid), var(--bg-light));
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 100px 20px;
-      background: radial-gradient(circle at top left, var(--color-primary), var(--bg-dark));
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #d0d0d0;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: var(--color-primary);
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-      border-left: 4px solid var(--color-primary);
-      padding-left: 10px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-      transition: transform 0.4s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    footer {
-      background: #111;
-      padding: 40px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Geek Korner</h1>
-    <p id="hero-text">Formations innovantes en ligne pour tous</p>
-  </header>
-
-  <nav>
-    <a href="#apropos">À propos</a>
-    <a href="#formations">Formations</a>
-    <a href="#temoignages">Témoignages</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="apropos">
-    <h2>À propos de nous</h2>
-    <p>
-      Geek Korner est une association spécialisée dans la création de formations digitales en ligne. Nous croyons que l'apprentissage numérique doit être accessible à tous. Que vous soyez débutant ou souhaitiez approfondir vos compétences, notre catalogue est conçu pour vous.
-    </p>
-    <p>
-      Nous proposons des contenus interactifs, adaptés aux dernières technologies : développement web, WordPress, intelligence artificielle, cybersécurité, e-commerce, design UX/UI.
-    </p>
-  </section>
-
-  <section id="formations">
-    <h2>Nos Formations</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>HTML/CSS pour débutants</h3>
-        <p>Apprenez les bases du web en construisant vos premières pages.</p>
-      </div>
-      <div class="card">
-        <h3>WordPress de A à Z</h3>
-        <p>Créez des sites professionnels sans écrire une ligne de code.</p>
-      </div>
-      <div class="card">
-        <h3>Introduction à l'IA</h3>
-        <p>Comprendre le machine learning, les réseaux de neurones et ChatGPT.</p>
-      </div>
-      <div class="card">
-        <h3>Cybersécurité 101</h3>
-        <p>Protégez vos données et découvrez les bonnes pratiques numériques.</p>
-      </div>
-      <div class="card">
-        <h3>E-commerce</h3>
-        <p>Créez une boutique en ligne performante et rentable.</p>
-      </div>
-      <div class="card">
-        <h3>UX/UI Design</h3>
-        <p>Concevez des interfaces modernes, accessibles et esthétiques.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="temoignages">
-    <h2>Ils nous font confiance</h2>
-    <p>"Grâce à Geek Korner, j'ai pu créer mon site e-commerce en 1 mois !" — Sarah D.</p>
-    <p>"Des formations très accessibles, parfaites pour les débutants !" — Julien B.</p>
-  </section>
-
-  <section id="faq">
-    <h2>Foire aux questions</h2>
-    <p><strong>Comment s'inscrire à une formation ?</strong> Sur notre site, cliquez sur le bouton "Rejoindre" et choisissez votre formation.</p>
-    <p><strong>Les formations sont-elles gratuites ?</strong> Oui, pour les membres de l'association.</p>
-    <p><strong>Dois-je avoir des compétences en informatique ?</strong> Non, nous accueillons tous les niveaux !</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p>📧 contact@geekkorner.fr</p>
-    <p>📱 06 00 00 00 00</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Geek Korner. Tous droits réservés.
-  </footer>
-
-  <script>
-    // Effet de révélation au scroll
-    const sections = document.querySelectorAll("section");
-    const reveal = () => {
-      sections.forEach(s => {
-        const top = s.getBoundingClientRect().top;
-        if (top < window.innerHeight * 0.8) {
-          s.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", reveal);
-    window.addEventListener("load", reveal);
-
-    // Animation texte header
-    const heroText = document.getElementById("hero-text");
-    const phrases = [
-      "Formations innovantes en ligne pour tous",
-      "Boostez vos compétences digitales",
-      "Créez votre avenir numérique"
-    ];
-    let phraseIndex = 0;
-    setInterval(() => {
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      heroText.textContent = phrases[phraseIndex];
-    }, 4000);
-  </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Geek Korner - Formations Numériques</title>
   <style>
     :root {
@@ -251,7 +25,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, var(--bg-dark), var(--bg-mid), var(--bg-light));
       color: var(--text-light);
       line-height: 1.6;
@@ -384,7 +158,12 @@
   <header>
     <h1>Geek Korner</h1>
     <p id="hero-text">Formations innovantes en ligne pour tous</p>
-    <img class="image-banner" src="https://source.unsplash.com/1200x400/?technology,code" alt="Bannière tech">
+    <img
+      class="image-banner"
+      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+      alt="Bannière tech"
+      loading="lazy"
+    />
   </header>
 
   <nav>
@@ -399,7 +178,12 @@
     <h2>À propos de nous</h2>
     <p>Geek Korner est une association spécialisée dans la création de formations digitales en ligne. Nous croyons que l'apprentissage numérique doit être accessible à tous. Que vous soyez débutant ou souhaitiez approfondir vos compétences, notre catalogue est conçu pour vous.</p>
     <p>Nous proposons des contenus interactifs, adaptés aux dernières technologies : développement web, WordPress, intelligence artificielle, cybersécurité, e-commerce, design UX/UI.</p>
-    <img class="image-banner" src="https://source.unsplash.com/1200x400/?teamwork,learning" alt="Apprentissage collaboratif">
+    <img
+      class="image-banner"
+      src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+      alt="Apprentissage collaboratif"
+      loading="lazy"
+    />
   </section>
 
   <section id="formations">
@@ -447,9 +231,9 @@
 
   <section id="contact">
     <h2>Contactez-nous</h2>
-    <form>
-      <input type="text" placeholder="Votre nom" required>
-      <input type="email" placeholder="Votre email" required>
+    <form onsubmit="alert('Merci pour votre message ! Nous reviendrons vers vous rapidement.'); return false;">
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
       <textarea rows="5" placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
