@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geek Korner - Formations digitales</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geek Korner - Formations Numériques</title>
   <style>
     :root {
-      --main-color: #00e0ff;
-      --dark-bg: #0f0c29;
-      --mid-bg: #302b63;
-      --light-bg: #24243e;
+      --color-primary: #00e0ff;
+      --color-secondary: #7f00ff;
+      --bg-dark: #0f0c29;
+      --bg-mid: #302b63;
+      --bg-light: #24243e;
+      --text-light: #f0f0f0;
     }
 
     * {
@@ -24,52 +26,47 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, var(--dark-bg), var(--mid-bg), var(--light-bg));
-      color: #f5f5f5;
+      background: linear-gradient(to bottom, var(--bg-dark), var(--bg-mid), var(--bg-light));
+      color: var(--text-light);
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 100px 20px 60px;
-      background: radial-gradient(circle at top left, var(--main-color), #1c1b3a);
-      color: white;
+      padding: 100px 20px;
+      background: radial-gradient(circle at top left, var(--color-primary), var(--bg-dark));
     }
 
     header h1 {
       font-size: 3rem;
-      text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.5rem;
-      color: #e0e0e0;
-      height: 30px;
+      font-size: 1.2rem;
+      color: #d0d0d0;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
       z-index: 1000;
     }
 
     nav a {
-      color: var(--main-color);
+      color: var(--color-primary);
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: white;
     }
 
     section {
@@ -89,225 +86,140 @@
     section h2 {
       font-size: 2.4rem;
       margin-bottom: 20px;
-      color: var(--main-color);
-      border-left: 5px solid var(--main-color);
-      padding-left: 15px;
+      border-left: 4px solid var(--color-primary);
+      padding-left: 10px;
     }
 
-    .cards {
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      display: flex;
-      flex-direction: column;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .card:hover img {
-      transform: scale(1.05);
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .card-content h3 {
-      margin: 0 0 10px;
-      color: var(--main-color);
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .cta a {
-      background: linear-gradient(135deg, #00e0ff, #7f00ff);
-      color: white;
-      padding: 14px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .cta a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 224, 255, 0.4);
+      transform: translateY(-10px);
     }
 
     footer {
-      background: #1c1b3a;
-      color: #aaa;
+      background: #111;
+      padding: 40px;
       text-align: center;
-      padding: 25px;
       font-size: 0.9rem;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Geek Korner</h1>
-    <p id="typed-text">|</p>
+    <p id="hero-text">Formations innovantes en ligne pour tous</p>
   </header>
 
   <nav>
     <a href="#apropos">À propos</a>
     <a href="#formations">Formations</a>
+    <a href="#temoignages">Témoignages</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="apropos">
-    <h2>Notre mission</h2>
+    <h2>À propos de nous</h2>
     <p>
-      Geek Korner est une association dédiée à l'apprentissage numérique moderne. Notre objectif : rendre les compétences digitales accessibles à tous.
+      Geek Korner est une association spécialisée dans la création de formations digitales en ligne. Nous croyons que l'apprentissage numérique doit être accessible à tous. Que vous soyez débutant ou souhaitiez approfondir vos compétences, notre catalogue est conçu pour vous.
+    </p>
+    <p>
+      Nous proposons des contenus interactifs, adaptés aux dernières technologies : développement web, WordPress, intelligence artificielle, cybersécurité, e-commerce, design UX/UI.
     </p>
   </section>
 
   <section id="formations">
-    <h2>Nos formations</h2>
-    <div class="cards">
+    <h2>Nos Formations</h2>
+    <div class="card-grid">
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?wordpress" alt="WordPress">
-        <div class="card-content">
-          <h3>Créer un site WordPress</h3>
-          <p>Lancez votre site sans coder grâce à des outils visuels puissants.</p>
-        </div>
+        <h3>HTML/CSS pour débutants</h3>
+        <p>Apprenez les bases du web en construisant vos premières pages.</p>
       </div>
-
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?ai,technology" alt="IA">
-        <div class="card-content">
-          <h3>Découvrir l'IA</h3>
-          <p>Comprenez et utilisez l’intelligence artificielle dans votre quotidien.</p>
-        </div>
+        <h3>WordPress de A à Z</h3>
+        <p>Créez des sites professionnels sans écrire une ligne de code.</p>
       </div>
-
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?html,code" alt="HTML CSS">
-        <div class="card-content">
-          <h3>HTML/CSS pour débutants</h3>
-          <p>Maîtrisez les bases du web avec des projets concrets et interactifs.</p>
-        </div>
+        <h3>Introduction à l'IA</h3>
+        <p>Comprendre le machine learning, les réseaux de neurones et ChatGPT.</p>
       </div>
-
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?ecommerce" alt="E-commerce">
-        <div class="card-content">
-          <h3>Créer une boutique en ligne</h3>
-          <p>Vendez vos produits avec WooCommerce ou Shopify.</p>
-        </div>
+        <h3>Cybersécurité 101</h3>
+        <p>Protégez vos données et découvrez les bonnes pratiques numériques.</p>
       </div>
-
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?cybersecurity" alt="Cyber">
-        <div class="card-content">
-          <h3>Introduction à la cybersécurité</h3>
-          <p>Protégez vos données et comprenez les menaces numériques.</p>
-        </div>
+        <h3>E-commerce</h3>
+        <p>Créez une boutique en ligne performante et rentable.</p>
       </div>
-
       <div class="card">
-        <img src="https://source.unsplash.com/featured/?design,uiux" alt="UI/UX">
-        <div class="card-content">
-          <h3>UX/UI Design</h3>
-          <p>Créez des interfaces belles et intuitives avec Figma & co.</p>
-        </div>
+        <h3>UX/UI Design</h3>
+        <p>Concevez des interfaces modernes, accessibles et esthétiques.</p>
       </div>
     </div>
+  </section>
 
-    <div class="cta">
-      <a href="#contact">Rejoindre l'association</a>
-    </div>
+  <section id="temoignages">
+    <h2>Ils nous font confiance</h2>
+    <p>"Grâce à Geek Korner, j'ai pu créer mon site e-commerce en 1 mois !" — Sarah D.</p>
+    <p>"Des formations très accessibles, parfaites pour les débutants !" — Julien B.</p>
+  </section>
+
+  <section id="faq">
+    <h2>Foire aux questions</h2>
+    <p><strong>Comment s'inscrire à une formation ?</strong> Sur notre site, cliquez sur le bouton "Rejoindre" et choisissez votre formation.</p>
+    <p><strong>Les formations sont-elles gratuites ?</strong> Oui, pour les membres de l'association.</p>
+    <p><strong>Dois-je avoir des compétences en informatique ?</strong> Non, nous accueillons tous les niveaux !</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p style="text-align:center;">
-      📧 contact@geekkorner.fr<br />
-      📱 06 00 00 00 00<br />
-      📍 France – 100% en ligne
-    </p>
-    <div class="cta">
-      <a href="mailto:contact@geekkorner.fr">Envoyer un message</a>
-    </div>
+    <h2>Contactez-nous</h2>
+    <p>📧 contact@geekkorner.fr</p>
+    <p>📱 06 00 00 00 00</p>
   </section>
 
   <footer>
-    &copy; 2025 Geek Korner — Association Loi 1901
+    &copy; 2025 Geek Korner. Tous droits réservés.
   </footer>
 
-  <!-- JavaScript natif effets -->
   <script>
-    // Typing effect
-    const textElement = document.getElementById('typed-text');
-    const messages = [
-      "Formations modernes et accessibles",
-      "Créez, codez, innovez avec nous",
-      "Devenez acteur du numérique"
-    ];
-    let i = 0, j = 0, isDeleting = false;
-
-    function typeWriter() {
-      let current = messages[i];
-      textElement.textContent = current.substring(0, j) + '|';
-
-      if (!isDeleting && j < current.length) {
-        j++;
-        setTimeout(typeWriter, 80);
-      } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(typeWriter, 40);
-      } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % messages.length;
-        setTimeout(typeWriter, 1000);
-      }
-    }
-    typeWriter();
-
-    // Fade-in on scroll
+    // Effet de révélation au scroll
     const sections = document.querySelectorAll("section");
-    function reveal() {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8) {
-          sec.classList.add("visible");
+    const reveal = () => {
+      sections.forEach(s => {
+        const top = s.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.8) {
+          s.classList.add("visible");
         }
       });
-    }
+    };
     window.addEventListener("scroll", reveal);
     window.addEventListener("load", reveal);
+
+    // Animation texte header
+    const heroText = document.getElementById("hero-text");
+    const phrases = [
+      "Formations innovantes en ligne pour tous",
+      "Boostez vos compétences digitales",
+      "Créez votre avenir numérique"
+    ];
+    let phraseIndex = 0;
+    setInterval(() => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      heroText.textContent = phrases[phraseIndex];
+    }, 4000);
   </script>
 </body>
 </html>
