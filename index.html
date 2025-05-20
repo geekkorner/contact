@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -167,6 +167,261 @@
   <footer>
     &copy; 2025 Geek Korner – Association Loi 1901
   </footer>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geek Korner - Formations numériques pour tous</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+      height: 30px;
+    }
+
+    nav {
+      background-color: #292943;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      color: #1e1e2f;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      flex: 1 1 280px;
+      max-width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background-color: #292943;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #44446e;
+    }
+
+    footer {
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Geek Korner</h1>
+    <p id="typed-text">|</p>
+  </header>
+
+  <nav>
+    <a href="#apropos">À propos</a>
+    <a href="#formations">Formations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="apropos">
+    <h2>Notre mission</h2>
+    <p>
+      Geek Korner est une association à but non lucratif dédiée à la démocratisation de la culture numérique.
+      Nous proposons des formations en ligne accessibles, simples et ludiques sur l’informatique, la création web, l’intelligence artificielle et bien plus encore.
+    </p>
+  </section>
+
+  <section class="section" id="formations">
+    <h2>Nos formations phares</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Créer un site WordPress</h3>
+        <p>Apprenez à créer un site pro sans coder. Idéal pour débutants.</p>
+      </div>
+      <div class="card">
+        <h3>Découverte de l'IA</h3>
+        <p>Comprendre et utiliser les outils d’intelligence artificielle comme ChatGPT.</p>
+      </div>
+      <div class="card">
+        <h3>HTML / CSS pour débutants</h3>
+        <p>Maîtrisez les bases du développement web avec des exercices concrets.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a href="#contact">Rejoindre l'association</a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Nous contacter</h2>
+    <p style="text-align:center;">
+      📧 Email : contact@geekkorner.fr<br />
+      📱 Téléphone : 06 00 00 00 00<br />
+      📍 Adresse : [à compléter]
+    </p>
+    <div class="cta">
+      <a href="mailto:contact@geekkorner.fr">Envoyer un email</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Geek Korner – Association Loi 1901
+  </footer>
+
+  <!-- JavaScript natif pour les effets dynamiques -->
+  <script>
+    // Animation de type "machine à écrire"
+    const textElement = document.getElementById('typed-text');
+    const messages = ["Formations accessibles à tous", "Apprenez WordPress, IA, HTML...", "Rejoignez une communauté passionnée"];
+    let messageIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+      const current = messages[messageIndex];
+      const visibleText = current.substring(0, charIndex);
+
+      textElement.textContent = visibleText + (isDeleting ? '' : '|');
+
+      if (!isDeleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(typeWriter, 80);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeWriter, 40);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          messageIndex = (messageIndex + 1) % messages.length;
+        }
+        setTimeout(typeWriter, 1000);
+      }
+    }
+
+    // Fade-in on scroll
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.section');
+      const triggerBottom = window.innerHeight * 0.9;
+
+      reveals.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', () => {
+      typeWriter();
+      revealOnScroll();
+    });
+  </script>
 
 </body>
 </html>
